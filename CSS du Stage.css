@@ -1,0 +1,132 @@
+:root{
+  --background-color:#ffffff;
+  --text-color: 
+
+}
+
+.conteneur{
+  display: flex;
+  align-items:flex-start;
+  justify-content: space-between;
+  padding: 20px;
+}
+.top-left{
+  order: 1;
+  transform: translateY(45px);
+}
+.top-right{
+  order: 1;
+  display: flex;
+  white-space: nowrap;
+  transform: translateY(45px);
+}
+
+img{
+  max-width: 150px;
+  margin-right: 10px;
+}
+.statut{
+  flex: 1;
+  margin-right: 20px;
+}
+.connect-btn{
+  background-color: #007bff;
+  color: white;
+  padding: 3px 6px;
+  border: none;
+  border-radius: 5px;
+  height: 40px;
+}
+.connect-btn i{
+  margin-right: 5px;
+}
+.fond{
+  background-image: url(./background-container.jpg);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  height: calc(2/3*100%);
+  width: 100%;
+  /* background: linear-gradient(bottom, #ffff 50%, #000000 50% ); */
+  background-repeat: no-repeat;
+}
+
+.Li{
+ position: relative;
+  text-align: center;
+  top: 90px;
+ color: white;
+
+}
+.text{
+  position: relative;
+  text-align: center;
+  top: 80px;
+  color: white;
+  
+}
+.boutton{
+  text-align: center;
+}
+.btn{
+  display: inline-block;
+  margin-right: 15px;
+  margin-top: 130px;
+  background-color: bisque;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+}
+.group{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  
+}
+.e{
+  margin-bottom: 15px;
+  color: white;
+  margin-left: 90px;
+  transform: translateY(190px);
+}
+.all{
+  margin-bottom: 15px;
+  color: white;
+  margin-left: 300px;
+  transform: translateY(85px);
+}
+.l{
+  text-align: center;
+  color: white;
+  margin-left: 20px;
+}
+/* Téléphones portables (portrait) */
+@media (max-width: 576px) {
+  .top-right{
+    display: none;
+  }
+
+  /* Styles pour les petits écrans */
+
+}
+
+/* Tablettes (portrait) */
+@media (min-width: 576px) and (max-width: 768px) {
+  .top-right{
+    display: none;
+  }
+  /* Styles pour les tablettes en portrait */
+}
+
+/* Tablettes (paysage) et ordinateurs de bureau */
+@media (min-width: 768px) and (max-width: 992px) {
+  /* Styles pour les tablettes en paysage et petits ordinateurs de bureau */
+}
+
+/* Ordinateurs de bureau et grands écrans */
+@media (min-width: 992px) {
+  /* Styles pour les grands écrans */
+}
+
+
+
