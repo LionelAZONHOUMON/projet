@@ -1,108 +1,189 @@
 :root{
   --background-color:#ffffff;
-  --text-color: 
+  --text-color-nav: #3d5152; 
+  --navbar-button : #9fadb2;
+  --footer-background : #252525;
+  --media-size : 100vh;
+  --font-family-for-all-text : sans-serif, Courier, monospace;
+  --fond--color--button : #19474c;
 
 }
+body, html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ul, ol{
+  list-style-type: none;
+}
+nav{
+  margin-bottom: 0;
+}
 
-.conteneur{
+.navbar{
   display: flex;
-  align-items:flex-start;
+  flex-direction: row;
   justify-content: space-between;
-  padding: 20px;
+  margin-bottom: 0;
 }
-.top-left{
-  order: 1;
-  transform: translateY(45px);
+.logo-navbar{
+  object-fit: contain;
+
+  /* order: 1;
+  transform: translateY(45px); */
 }
-.top-right{
-  order: 1;
+.navbar-element{
+  /* order: 1; */
   display: flex;
   white-space: nowrap;
-  transform: translateY(45px);
+  /* transform: translateY(45px); */
 }
 
 img{
   max-width: 150px;
   margin-right: 10px;
 }
-.statut{
-  flex: 1;
-  margin-right: 20px;
+.navbar-status{
+  display: flex;
+  justify-content: center;
+  color: var(--text-color-nav);
+  align-items: center;
+  font-family:var(--font-family-for-all-text);
+  text-align: center;
+  font-weight: 700;
+  cursor: pointer;
+  margin-right: 10px;
+  margin-left: 10px;
+
 }
 .connect-btn{
-  background-color: #007bff;
+  font-family: var(--font-family-for-all-text);
+  font-weight: 800;
+  background-color: var(--navbar-button);
+  cursor: pointer;
   color: white;
   padding: 3px 6px;
   border: none;
   border-radius: 5px;
   height: 40px;
+} 
+.connect-btn:hover {
+  background-color: var(--text-color-nav);
 }
+
+
 .connect-btn i{
   margin-right: 5px;
 }
+
+
+.Before-fond {
+  
+}
+
+
 .fond{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  margin-top: 0%;
   background-image: url(./background-container.jpg);
   background-size: cover;
   background-position: center;
   position: relative;
-  height: calc(2/3*100%);
+  height: calc(5/6*var(--media-size));
   width: 100%;
   /* background: linear-gradient(bottom, #ffff 50%, #000000 50% ); */
   background-repeat: no-repeat;
 }
 
-.Li{
- position: relative;
+.fond-title{
+ /* position: relative;
   text-align: center;
-  top: 90px;
- color: white;
+  top: 90px; */
+  font-family: var(--font-family-for-all-text);
+  font-weight: 600;
+  color: white;
+  margin-bottom: 10px;
 
 }
 .text{
-  position: relative;
+  /* position: relative;
   text-align: center;
-  top: 80px;
+  top: 80px; */
   color: white;
-  
+  font-family: var(--font-family-for-all-text);
+  font-weight: 300;
 }
-.boutton{
-  text-align: center;
+.fond-boutons{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 30%;
 }
-.btn{
-  display: inline-block;
+.fond-button-element{
+  /* display: inline-block;
   margin-right: 15px;
   margin-top: 130px;
   background-color: bisque;
   border: none;
   border-radius: 5px;
-  font-size: 18px;
+  font-size: 18px; */
+  font-family: var(--font-family-for-all-text);
+  font-weight: 600;
+  background-color: var(--fond--color--button);
+  cursor: pointer;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  height: 40px;
+  margin-right: 5px;
+  margin-left: 5px;
+}
+.footer-group{
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  width: 100%;
 }
 .group{
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  
+  justify-content: space-between;
+  align-items: center;
 }
 .e{
-  margin-bottom: 15px;
+  /* margin-bottom: 15px;
   color: white;
   margin-left: 90px;
-  transform: translateY(190px);
+  transform: translateY(190px); */
 }
 .all{
-  margin-bottom: 15px;
+  /* margin-bottom: 15px;
   color: white;
   margin-left: 300px;
-  transform: translateY(85px);
+  transform: translateY(85px); */
 }
 .l{
   text-align: center;
   color: white;
   margin-left: 20px;
 }
+
+footer {
+  background-color: var(--footer-background);
+  height: calc(1/3*var(--media-size));
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
 /* Téléphones portables (portrait) */
 @media (max-width: 576px) {
-  .top-right{
+  .navbar-element{
     display: none;
   }
 
@@ -112,7 +193,7 @@ img{
 
 /* Tablettes (portrait) */
 @media (min-width: 576px) and (max-width: 768px) {
-  .top-right{
+  .navbar-element{
     display: none;
   }
   /* Styles pour les tablettes en portrait */
